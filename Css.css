@@ -1,0 +1,351 @@
+body {
+    background-image: url("images/bomb background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+#passwindow {
+    text-align: center;
+}
+
+#passwords {
+    background-color: rgba(255, 238, 0, 0.871);
+    border: 2px solid;
+    position: absolute;
+    top: 357px;
+    left: 647px;
+    height: 42px;
+    width: 165px;
+}
+
+#passwords:hover {
+    background-color: rgba(134, 233, 13, 0.871);
+}
+
+
+.buttons {
+    background-color: rgba(104, 125, 50, 0.719);
+    border: 2px solid;
+    height: 18px;
+    width: 47px;
+    position: absolute;
+    box-shadow: 2px 2px 2px;
+    transition: 0.1s;
+}
+
+.buttons:hover {
+    background-color: rgba(162, 216, 26, 0.719);
+    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
+    
+}
+
+.buttons:active {
+    transform: scale(0.95); /* better click effect */
+    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
+}
+
+
+#b1 { top: 419px; left: 647px; }
+#b2 { top: 419px; left: 708px; }
+#b3 { top: 419px; left: 768px; }
+
+#b4 { top: 451px; left: 647px; }
+#b5 { top: 451px; left: 708px; }
+#b6 { top: 451px; left: 768px; }
+
+#b7 { top: 483px; left: 647px; }
+#b8 { top: 483px; left: 708px; }
+#b9 { top: 483px; left: 768px; }
+
+#R  { top: 513px; left: 647px; height: 18px; width: 47px; }
+#b0 { top: 513px; left: 708px; }
+#bx { top: 513px; left: 768px; }
+
+
+#X {
+    top: 410px;
+    left: 825px;
+    height: 30px;
+    width: 22px;
+    border-top-right-radius: 12px;
+}
+
+#Y {
+    top: 449px;
+    left: 825px;
+    height: 30px;
+    width: 22px;
+    border-top-right-radius: 12px;
+}
+
+#H {
+    top: 481px;
+    left: 850px;
+    height: 20px;
+    width: 30px;
+}
+
+
+#red { position: absolute; top: 170px; left: 10px; }
+#blue { position: absolute; top: 230px; left: 10px; }
+#green { position: absolute; top: 290px; left: 10px; }
+
+
+#passcode {
+    border: 2px solid;
+    background-color: rgb(237, 225, 233);
+    width: 70px;
+    height: 24px;
+    box-shadow: 2px 2px 5px;
+    position: absolute;
+    top: 0px;
+    left: 1435px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
+
+.notebook {
+    position: absolute;
+    top: 350px;
+    left: 1260px;
+}
+
+.book {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: transform 0.9s;
+}
+
+.paper.flipped {
+    transform: rotateY(-180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fdf6e3;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+
+.controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
+}
+
+.controls button {
+    width: 40px;
+    height: 30px;
+    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
+}
+.front, .back {
+    background: linear-gradient(#fdf6e3, #f5e6c8);
+    font-family: "Courier New", monospace;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2); 
+}
+
+.book {
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.5);
+}
+.cover .front,
+.cover .back {
+    background: linear-gradient(135deg, #5a2c2c, #2e1a1a);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #111;
+}
+#cover-front { z-index: 4; }
+#p1 { z-index: 3; }
+#p2 { z-index: 2; }
+#cover-back { z-index: 1; }
+#cover-front {
+    transform-origin: left;
+}
+.front, .back {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #2b2b2b;
+}
+.strike {
+    text-decoration: line-through;
+    color: #a00000;
+}
+
+
+.radio-container {
+  border: 2px solid rgb(9, 9, 9);
+  padding: 0px;
+  width: 300px;
+  margin: auto;
+  position: absolute;
+  bottom: 200px;
+}
+
+input[type="range"] {
+  width: 300px;
+  cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
+}
+   
+
+#image {
+    width: 68%;
+    height: auto;
+    position: absolute;
+    left: 250px ;
+    top: 150px;
+    
+}
+#radio-image{
+    width: 55%; 
+    height: auto;
+    position: absolute;
+    right: 840px;
+    top: 320px;
+}
+#jumpscare {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 9999;
+    display: none;
+}
+#radio-On{
+    background-color: rgb(58, 221, 88);
+    position: relative;
+    top: 533px;
+    left: 378px;
+    height: 15px;
+    width: 18px;
+    text-align: center;
+}
+#radio-Off{
+    background-color: rgb(249, 65, 65);
+    position: relative;
+    top: 533px;
+    left: 383px;
+    height: 15px;
+    width: 18px;
+    text-align: center;
+}
+#tuner{
+    background-color: #000000;
+    position: relative;
+    top: 645px;
+    left: 150px;
+    width: 200px;
+
+}
+
+#freq{text-align: center;}
+#freq1{text-align: center;}
+#freq2{text-align: center;}
+span {
+    border: 2px solid;
+    background-color: rgb(233, 207, 207);
+    width: 86px;
+    height: 20px;
+    box-shadow: 2px 2px 5px;
+    display: inline-block;
+    position:relative;
+    top: 524px;
+    left: 204px;
+    border: #000000 solid;
+}
+#timer {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 28px;
+    font-family: monospace;
+    color: red;
+    background: black;
+    padding: 5px 10px;
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+#flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 9999;
+}
+
+#fade {
+    position: fixed;
+    inset: 0; 
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+    z-index: 999999;
+}
+#penaltyText {
+    position: absolute;
+    top: 20px; 
+    left: 155px;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show-penalty {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -40px);
+    }
+}
