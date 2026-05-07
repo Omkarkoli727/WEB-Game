@@ -93,6 +93,10 @@ Defuse the bomb before time runs out.
 
 ## 📸 Screenshots
 
+<img width="1886" height="908" alt="Screenshot 2026-05-07 113534" src="https://github.com/user-attachments/assets/2ac8a318-e97a-49d2-8aea-4fd07d17da70" />
+<br>
+<img width="664" height="471" alt="Screenshot 2026-05-07 113107" src="https://github.com/user-attachments/assets/7873381d-7bcf-4e10-92bd-da95d1255cd7" />
+
 
 
 ---
