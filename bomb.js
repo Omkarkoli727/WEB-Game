@@ -154,7 +154,6 @@ const papers = [
     document.getElementById("cover-front"),
     document.getElementById("p1"),
     document.getElementById("p2"),
-    document.getElementById("p3"),
     document.getElementById("cover-back")
 
 ];
