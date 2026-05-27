@@ -1,4 +1,4 @@
-﻿# 💣 Bomb Defuse Game
+﻿# Bomb Defuse Game
 
 An immersive browser-based bomb defusal puzzle game built using HTML, CSS, and JavaScript.
 
@@ -6,21 +6,21 @@ Players must solve radio-frequency puzzles, discover hidden passcodes, and defus
 
 ---
 
-## 🎮 Features
+## Features
 
-* ⏳ Real-time countdown timer
-* 📻 Interactive radio frequency puzzle
-* 🔐 Keypad password system
-* 📖 Animated notebook with hints
-* 🔊 Horror-style sound effects
-* 💥 Explosion sequence with screen shake
-* 👻 Hidden jumpscare easter egg
-* 🎧 Dynamic audio system
-* 🧩 Multiple hidden secret codes
+* Real-time countdown timer
+* Interactive radio frequency puzzle
+* Keypad password system
+* Animated notebook with hints
+* Horror-style sound effects
+* Explosion sequence with screen shake
+* Hidden jumpscare easter egg
+* Dynamic audio system
+* Multiple hidden secret codes
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 * HTML5
 * CSS3
@@ -28,7 +28,7 @@ Players must solve radio-frequency puzzles, discover hidden passcodes, and defus
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```plaintext
 Bomb-Defuse-Game/
@@ -51,7 +51,7 @@ Bomb-Defuse-Game/
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository
 
@@ -65,7 +65,7 @@ git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 
 ---
 
-## 🎯 Gameplay
+## Gameplay
 
 ### Objective
 
@@ -82,7 +82,7 @@ Defuse the bomb before time runs out.
 
 ---
 
-## 🔑 Secret Features
+## Secret Features
 
 * Hidden cheat codes
 * Horror jumpscare mode
@@ -91,7 +91,7 @@ Defuse the bomb before time runs out.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <img width="1886" height="908" alt="Screenshot 2026-05-07 113534" src="https://github.com/user-attachments/assets/2ac8a318-e97a-49d2-8aea-4fd07d17da70" />
 <br>
@@ -101,7 +101,7 @@ Defuse the bomb before time runs out.
 
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
 * Mobile responsive UI
 * Multiplayer mode
@@ -112,7 +112,7 @@ Defuse the bomb before time runs out.
 
 ---
 
-## 👨‍💻 Developer
+## Developer
 
 Developed by Omkar Koli
 
