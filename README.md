@@ -114,13 +114,9 @@ Defuse the bomb before time runs out.
 
 ## 👨‍💻 Developer
 
-Created by Omkar Koli
+Developed by Omkar Koli
 
 
----
 
-## 📜 License
-
-This project is open-source and free to use for learning purposes.
 
 
