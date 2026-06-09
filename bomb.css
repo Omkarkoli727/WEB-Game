@@ -1,28 +1,74 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin:     0;
+    padding:    0;
+}
+
 body {
-    background-image: url("images/bomb background.jpg");
+    width:             100vw;
+    height:            100vh;
+    overflow:          hidden;           
+    background-image:  url("images/bomb background.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size:   cover;
     background-attachment: fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
 }
 
 
-#passwindow {
-    text-align: center;
+#game-wrapper {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    width:           100vw;
+    height:          100vh;
+    overflow:        hidden;
 }
+
+
+#game-container {
+    position:   relative;
+    width:      min(100vw, calc(100vh * 16 / 9));
+    height:     min(100vh, calc(100vw *  9 / 16));
+    overflow:   hidden;
+
+
+    font-size:  clamp(6px, 0.83vw, 16px);
+}
+
+
+#image {
+    position: absolute;
+    left:     13.02%;
+    top:      13.89%;
+    width:    68%;
+    height:   auto;
+}
+
+#radio-image {
+    position: absolute;
+    right:    57.30%;
+    top:      51.20%;
+    width:    54%;
+    height:   auto;
+}
+
+
 
 #passwords {
     background-color: rgba(255, 238, 0, 0.871);
-    border: 2px solid;
-    position: absolute;
-    top: 357px;
-    left: 647px;
-    height: 42px;
-    width: 165px;
+    border:           2px solid;
+    position:         absolute;
+    top:              38.44%;
+    left:             39.28%;
+    height:           5.00%;
+    width:            11.00%;
+    font-size:        clamp(8px, 0.9vw, 16px);
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
 }
 
 #passwords:hover {
@@ -30,125 +76,201 @@ body {
 }
 
 
+
 .buttons {
-    background-color: rgba(104, 125, 50, 0.719);
-    border: 2px solid;
-    height: 18px;
-    width: 47px;
-    position: absolute;
-    box-shadow: 2px 2px 2px;
-    transition: 0.1s;
+    background-color: rgba(104, 125, 30, 0.719);
+    border:           2px solid;
+    height:           2.10%;
+    width:            3.20%;
+    position:         absolute;
+    box-shadow:       2px 2px 2px;
+    transition:       transform 0.1s, background-color 0.1s;
+    font-size:        clamp(6px, 0.7vw, 12px);
+    cursor:           default;
+    padding:          0;
+    line-height:      1;
 }
 
 .buttons:hover {
     background-color: rgba(162, 216, 26, 0.719);
-    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
-    
+    cursor: url("images/icons8-double-tap-gesture-25.png"), auto;
 }
 
 .buttons:active {
-    transform: scale(0.95); /* better click effect */
-    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
+    transform: scale(0.95);
+    cursor: url("images/icons8-double-tap-gesture-25.png"), auto;
 }
 
 
-#b1 { top: 419px; left: 647px; }
-#b2 { top: 419px; left: 708px; }
-#b3 { top: 419px; left: 768px; }
 
-#b4 { top: 451px; left: 647px; }
-#b5 { top: 451px; left: 708px; }
-#b6 { top: 451px; left: 768px; }
+/* Row 1 */
+#b1 { top: 45.80%; left: 39.25%; }
+#b2 { top: 45.80%; left: 43.32%; }
+#b3 { top: 45.80%; left: 47.25%; }
 
-#b7 { top: 483px; left: 647px; }
-#b8 { top: 483px; left: 708px; }
-#b9 { top: 483px; left: 768px; }
+/* Row 2 */
+#b4 { top: 49.45%; left: 39.25%; }
+#b5 { top: 49.45%; left: 43.32%; }
+#b6 { top: 49.45%; left: 47.25%; }
 
-#R  { top: 513px; left: 647px; height: 18px; width: 47px; }
-#b0 { top: 513px; left: 708px; }
-#bx { top: 513px; left: 768px; }
+/* Row 3 */
+#b7 { top: 53.30%; left: 39.25%; }
+#b8 { top: 53.30%; left: 43.32%; }
+#b9 { top: 53.30%; left: 47.25%; }
+
+/* Row 4  –  R  0  * */
+#R  { top: 56.75%; left: 39.25%; }
+#b0 { top: 56.75%; left: 43.32%; }
+#bx { top: 56.75%; left: 47.25%; }
 
 
 #X {
-    top: 410px;
-    left: 825px;
-    height: 30px;
-    width: 22px;
+    top:                   44.55%;
+    left:                  51.40%;
+    height:                3.70%;    width:                 1.40%;
     border-top-right-radius: 12px;
 }
 
 #Y {
-    top: 449px;
-    left: 825px;
-    height: 30px;
-    width: 22px;
+    top:                   49.00%;
+    left:                  51.40%;
+    height:                3.70%;    width:                 1.40%;
     border-top-right-radius: 12px;
 }
 
 #H {
-    top: 481px;
-    left: 850px;
-    height: 20px;
-    width: 30px;
+    top:    52.90%;
+    left:   52.80%;
+    height: 2.10%;
+    width:  1.90%;
 }
 
-
-#red { position: absolute; top: 170px; left: 10px; }
-#blue { position: absolute; top: 230px; left: 10px; }
-#green { position: absolute; top: 290px; left: 10px; }
 
 
 #passcode {
-    border: 2px solid;
+    border:           2px solid;
     background-color: rgb(237, 225, 233);
-    width: 70px;
-    height: 24px;
-    box-shadow: 2px 2px 5px;
-    position: absolute;
-    top: 0px;
-    left: 1435px;
-    text-align: center;
-    font-size: 18px;
+    position:         absolute;
+    top:              0%;
+    left:             96.74%;
+    width:            3.65%;
+    height:           3.22%;
+    box-shadow:       2px 2px 5px;
+    text-align:       center;
+    font-size:        clamp(9px, 1.4vw, 18px);
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    z-index:          10;
 }
 
+
+
+
+#radio-On {
+    background-color: rgb(58, 221, 88);
+    position:         absolute;
+    top:              75.93%;
+    left:             23.59%;
+    height:           1.84%;
+    width:            1.17%;
+    border:           1px solid #1a6e2a;
+    text-align:       center;
+    cursor:           url("images/icons8-double-tap-gesture-25.png"), auto;
+}
+
+#radio-Off {
+    background-color: rgb(249, 65, 65);
+    position:         absolute;
+    top:              75.94%;
+    left:             25.30%;
+    height:           1.84%;
+    width:            1.17%;
+    border:           1px solid #8b0000;
+    text-align:       center;
+    cursor:           url("images/icons8-double-tap-gesture-25.png"), auto;
+}
+
+#tuner {
+    position:         absolute;
+    top:              93.30%;
+    left:             8.80%;
+    width:            13.42%;
+    background-color: #000;
+    cursor:           url("images/icons8-double-tap-gesture-25.png"), auto;
+}
+
+
+
+span {
+    display:          inline-block;
+    box-shadow:       2px 2px 5px;
+    text-align:       center;
+}
+
+
+#freq1,
+#freq,
+#freq2 {
+    background-color: rgb(233, 207, 207);
+    border:           2px solid #000;
+    position:         absolute;
+    width:            6.25%;    
+    height:           2.85%;     
+    left:             12.10%;    
+    font-size:        clamp(7px, 0.9vw, 14px);
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+}
+
+#freq1 { top: 81.20%; }   
+#freq  { top: 84.12%; }   
+#freq2 { top: 87.00%; }   
 
 
 
 .notebook {
     position: absolute;
-    top: 350px;
-    left: 1260px;
+    top:      55.49%;    left:82.30%;
+    width:    15.46%;   /* 220/1920 */
 }
 
 .book {
-    position: relative;
-    width: 220px;
-    height: 300px;
-    perspective: 1000px;
+    position:     relative;
+    width:        100%;         
+    aspect-ratio: 220 / 300;   
+    perspective:  1000px;
+    box-shadow:   5px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .paper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-origin: left;
+    position:        absolute;
+    inset:           0;          
+    transform-origin: left center;
     transform-style: preserve-3d;
-    transition: transform 0.9s;
+    transition:      transform 0.9s;
 }
 
 .paper.flipped {
     transform: rotateY(-180deg);
 }
 
-.front, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #fdf6e3;
-    border: 2px solid #000000;
-    border-radius: 8px;
-    padding: 10px;
+.front,
+.back {
+    position:          absolute;
+    inset:             0;
+    background:        linear-gradient(#fdf6e3, #f5e6c8);
+    border:            2px solid #000;
+    border-radius:     8px;
+    padding:           8%;            
     backface-visibility: hidden;
+    box-shadow:        inset 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family:       'Caveat', cursive;
+    font-size:         clamp(7px, 1.04vw, 20px);
+    line-height:       1.4;
+    color:             #2b2b2b;
+    overflow:          hidden;
 }
 
 .back {
@@ -156,196 +278,200 @@ body {
 }
 
 
+.cover .front,
+.cover .back {
+    background:     linear-gradient(135deg, #5a2c2c, #2e1a1a);
+    color:          white;
+    font-weight:    bold;
+    text-align:     center;
+    display:        flex;
+    flex-direction: column;
+    justify-content: center;
+    border:         3px solid #111;
+    padding:        10%;
+}
+
+.cover .front a,
+.cover .back a {
+    color: #ddd;
+}
+
+.strike {
+    text-decoration: line-through;
+    color:           #a00000;
+}
+
+
+#cover-front { z-index: 4; }
+#p1          { z-index: 3; }
+#p2          { z-index: 2; }
+#cover-back  { z-index: 1; }
+
+
 .controls {
-    margin-top: 30px;
-    display: flex;
+    display:         flex;
     justify-content: space-between;
-    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
+    margin-top:      8%;            
+    cursor:          url("images/icons8-double-tap-gesture-25.png"), auto;
 }
 
 .controls button {
-    width: 40px;
-    height: 30px;
-    cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
-}
-.front, .back {
-    background: linear-gradient(#fdf6e3, #f5e6c8);
-    font-family: "Courier New", monospace;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.2); 
-}
-
-.book {
-    box-shadow: 5px 10px 20px rgba(0,0,0,0.5);
-}
-.cover .front,
-.cover .back {
-    background: linear-gradient(135deg, #5a2c2c, #2e1a1a);
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 3px solid #111;
-}
-#cover-front { z-index: 4; }
-#p1 { z-index: 3; }
-#p2 { z-index: 2; }
-#cover-back { z-index: 1; }
-#cover-front {
-    transform-origin: left;
-}
-.front, .back {
-    font-family: 'Caveat', cursive;
-    font-size: 20px;
-    line-height: 1.4;
-    color: #2b2b2b;
-}
-.strike {
-    text-decoration: line-through;
-    color: #a00000;
+    width:       42%;
+    height:      clamp(18px, 2.8vh, 30px);
+    font-size:   clamp(10px, 1.2vw, 16px);
+    cursor:      url("images/icons8-double-tap-gesture-25.png"), auto;
 }
 
 
-.radio-container {
-  border: 2px solid rgb(9, 9, 9);
-  padding: 0px;
-  width: 300px;
-  margin: auto;
-  position: absolute;
-  bottom: 200px;
-}
-
-input[type="range"] {
-  width: 300px;
-  cursor: url("images/icons8-double-tap-gesture-30.png"), auto;
-}
-   
-
-#image {
-    width: 68%;
-    height: auto;
-    position: absolute;
-    left: 250px ;
-    top: 150px;
-    
-}
-#radio-image{
-    width: 55%; 
-    height: auto;
-    position: absolute;
-    right: 840px;
-    top: 320px;
-}
-#jumpscare {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 9999;
-    display: none;
-}
-#radio-On{
-    background-color: rgb(58, 221, 88);
-    position: relative;
-    top: 533px;
-    left: 378px;
-    height: 15px;
-    width: 18px;
-    text-align: center;
-}
-#radio-Off{
-    background-color: rgb(249, 65, 65);
-    position: relative;
-    top: 533px;
-    left: 383px;
-    height: 15px;
-    width: 18px;
-    text-align: center;
-}
-#tuner{
-    background-color: #000000;
-    position: relative;
-    top: 645px;
-    left: 150px;
-    width: 200px;
-
-}
-
-#freq{text-align: center;}
-#freq1{text-align: center;}
-#freq2{text-align: center;}
-span {
-    border: 2px solid;
-    background-color: rgb(233, 207, 207);
-    width: 86px;
-    height: 20px;
-    box-shadow: 2px 2px 5px;
-    display: inline-block;
-    position:relative;
-    top: 524px;
-    left: 204px;
-    border: #000000 solid;
-}
 #timer {
-    position: absolute;
-    top: 20px;
-    left: 40px;
-    font-size: 28px;
+    position:    absolute;
+    top:         1.85%;
+    left:        2.08%;
+    font-size:   clamp(14px, 2.6vw, 28px);
     font-family: monospace;
-    color: red;
-    background: black;
-    padding: 5px 10px;
-    border: 2px solid red;
-    box-shadow: 0 0 10px red;
-}
-#flash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
-    z-index: 9999;
+    color:       red;
+    background:  black;
+    padding:     0.4% 0.8%;
+    border:      2px solid red;
+    box-shadow:  0 0 10px red;
+    z-index:     100;
+    white-space: nowrap;
 }
 
-#fade {
-    position: fixed;
-    inset: 0; 
-    background: black;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s;
-    z-index: 999999;
-}
+
 #penaltyText {
-    position: absolute;
-    top: 20px; 
-    left: 155px;
-    transform: translateX(-50%);
-    color: red;
-    font-size: 28px;
+    position:   absolute;
+    top:        1.85%;
+    left:       8.07%;
+    transform:  translateX(-30%);
+    color:      red;
+    font-size:  clamp(14px, 2.6vw, 28px);
     font-weight: bold;
-    opacity: 0;
+    opacity:    0;
     pointer-events: none;
 }
 
 .show-penalty {
-    animation: fadeUp 0.8s ease;
+    animation: fadeUp 0.8s ease forwards;
 }
 
 @keyframes fadeUp {
-    0% {
-        opacity: 1;
-        transform: translate(-50%, 0);
+    0%   { opacity: 1; transform: translate(-30%,   0); }
+    100% { opacity: 0; transform: translate(-30%, -40px); }
+}
+
+#jumpscare {
+    position:    fixed;
+    inset:       0;
+    width:       100%;
+    height:      100%;
+    object-fit:  cover;
+    z-index:     9999;
+    display:     none;
+}
+
+#flash {
+    position:   fixed;
+    inset:      0;
+    background: white;
+    opacity:    0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index:    9999;
+}
+
+#fade {
+    position:   fixed;
+    inset:      0;
+    background: black;
+    opacity:    0;
+    pointer-events: none;
+    transition: opacity 1s;
+    z-index:    999999;
+}
+
+
+@media (max-width: 767px) {
+
+    
+    body::before {
+        content:         "↻  Rotate to landscape for the best experience";
+        display:         none;          
+        position:        fixed;
+        inset:           0;
+        background:      rgba(0, 0, 0, 0.85);
+        color:           #fff;
+        font-family:     monospace;
+        font-size:       4vw;
+        text-align:      center;
+        align-items:     center;
+        justify-content: center;
+        z-index:         100000;
+        padding:         20px;
     }
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -40px);
+
+    #timer {
+        font-size:  clamp(10px, 4vw, 20px);
+        padding:    0.5% 1%;
+    }
+
+    .front,
+    .back {
+        font-size: clamp(5px, 2.5vw, 14px);
+    }
+
+    .controls button {
+        height:    clamp(14px, 4vw, 24px);
+        font-size: clamp(8px, 2.5vw, 14px);
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    body::before {
+        display: flex;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #timer {
+        font-size: clamp(12px, 2vw, 22px);
+    }
+
+    .front,
+    .back {
+        font-size: clamp(7px, 1.3vw, 16px);
+    }
+
+    .controls button {
+        height:    clamp(16px, 2.5vh, 26px);
+        font-size: clamp(9px, 1.3vw, 14px);
+    }
+}
+
+
+@media (min-width: 1025px) {
+
+    .front,
+    .back {
+        font-size: clamp(10px, 1.04vw, 20px);
+    }
+}
+
+
+@media (min-width: 2560px) {
+
+    #game-container {
+        font-size: clamp(10px, 0.7vw, 22px);
+    }
+
+    .front,
+    .back {
+        font-size: clamp(12px, 0.8vw, 24px);
+    }
+
+    #timer {
+        font-size: clamp(18px, 1.8vw, 40px);
     }
 }
